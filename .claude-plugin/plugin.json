@@ -1,0 +1,7 @@
+{
+  "name": "pillbar",
+  "version": "0.7.0",
+  "description": "Pílulas em tempo real, acima (banner) e abaixo (statusLine) do prompt, organizadas por /pillbar layout: cache (contagem e re-warm), contexto, custo, limites de 5h/7d, modelo, effort, branch e pasta",
+  "author": { "name": "André Farias" },
+  "types": "./types/index.d.ts"
+}

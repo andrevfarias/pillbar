@@ -1,0 +1,6 @@
+{
+  "name": "pillbar",
+  "description": "Pílulas em tempo real acima e abaixo do prompt do Claude Code: cache, contexto, custo, limites, modelo, effort, branch e pasta",
+  "owner": { "name": "André Farias" },
+  "plugins": [{ "name": "pillbar", "source": "./" }]
+}
