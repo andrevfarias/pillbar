@@ -2,6 +2,16 @@
 
 Pílulas em tempo real acima (`banner`) e abaixo (`statusLine`) do prompt do Claude Code: a contagem do cache de prompt e quanto custa reescrevê-lo, o uso do contexto, o custo da sessão, os limites de 5h e 7d, o modelo, o effort, a branch e a pasta do projeto. Cada pílula tem um slug, e o comando `/pillbar layout` diz em que linha e de que lado ela fica.
 
+![pillbar: cache, custo, contexto e limites acima do input; modelo, effort, pasta e branch abaixo da linha de dicas](docs/layout.png)
+
+Esse layout sai destes três comandos:
+
+```
+/pillbar layout banner row(0) left cache,cost right ctx,5h,7d
+/pillbar layout statusLine clear
+/pillbar layout statusLine row(0) left model,effort right folder,branch
+```
+
 ## Instalação
 
 No prompt de uma sessão do Claude Code no terminal:
@@ -54,7 +64,15 @@ O repositório é privado: a instalação só funciona para quem tem acesso a el
 | `branch` | branch, arquivos alterados, à frente e atrás |
 | `folder` | pasta do projeto: o caminho inteiro quando cabe, senão o nome |
 
-O padrão é `statusLine row(0)` com `cache, ctx, cost, 5h, 7d` e `row(1)` com `model, effort, branch, folder`. Uma linha que não cabe na largura perde detalhe (barras, tokens, textos longos) em vez de quebrar.
+As pílulas e os seus estados: o cache quente, durante um turno, nos últimos minutos e frio; o contexto e o custo; os limites abaixo de 70%, a partir de 70% e a partir de 90%; o modelo, o effort e a branch.
+
+![As pílulas do pillbar nos seus estados](docs/pills.png)
+
+O padrão é `statusLine row(0)` com `cache, ctx, cost, 5h, 7d` e `row(1)` com `model, effort, branch, folder`:
+
+![O layout padrão do pillbar](docs/default.png)
+
+Uma linha que não cabe na largura perde detalhe (barras, tokens, textos longos) em vez de quebrar.
 
 ## Configuração
 
